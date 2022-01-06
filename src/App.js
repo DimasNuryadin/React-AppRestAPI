@@ -18,6 +18,7 @@ import HooksComp from './Components/Hooks/Functional/HooksComp';
 import HooksUseEffects from './Components/Hooks/Functional/HooksUseEffects';
 import { CartContext } from './CartContext';
 import ProductComp from './Components/Hooks/Functional/ProductComp';
+import HooksReducer from './Components/Hooks/Functional/HooksReducer';
 
 // Props dan State adalah Properti, seperti pada html ada class, id, value, href
 /* 
@@ -29,7 +30,7 @@ jika data berubah, maka state pun ikut berubah
 */
 
 const App = () => {
-  const[value, setValue] = useState(1)
+  const[value, setValue] = useState(0)
 
   return (
     // Router dan Passing Data #27, 28 
@@ -55,6 +56,9 @@ const App = () => {
 
           {/* useContext : Agar data dapat diakses secara global */}
           <Route exact path='/produk' component={ProductComp}/>
+
+          {/* useReducer : Untuk membuat useState lebih Kompleks */}
+          <Route exact path='/reducer' component={HooksReducer} />
 
         </Switch>
       </CartContext.Provider>

@@ -8,11 +8,11 @@ import {
     Collapse,
     Nav,
     NavItem,
-    NavLink,
     NavbarText,
     Button
 } from 'reactstrap';
 import { CartContext } from '../../CartContext';
+import { NavLink } from 'react-router-dom';
 
 const NavBarComp = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -39,38 +39,43 @@ const NavBarComp = (props) => {
                         navbar
                     >
                         <NavItem>
-                            <NavLink href="/">
+                            <NavLink to="/" className="nav-link">
                                 Home
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/about">
+                            <NavLink to="/about" className="nav-link">
                                 About
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/mahasiswa">
+                            <NavLink to="/mahasiswa" className="nav-link">
                                 Mahasiswa
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/kelas">
+                            <NavLink to="/kelas" className="nav-link">
                                 CLass
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/functional">
+                            <NavLink to="/functional" className="nav-link">
                                 Hook
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/useeffect">
+                            <NavLink to="/useeffect" className="nav-link">
                                 Use Effects
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/produk">
+                            <NavLink to="/produk" className="nav-link">
                                 Produk
+                            </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink to="/reducer" className="nav-link">
+                                Reducer
                             </NavLink>
                         </NavItem>
                     </Nav>
